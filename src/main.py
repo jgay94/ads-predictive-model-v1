@@ -40,3 +40,28 @@ X = sm.add_constant(X) # adding a constant (intercept term) to the model
 # Fit the model and print the summary
 model = sm.OLS(Y, X).fit()
 print(model.summary())
+
+# This function calculates the predicted contribution margin (CM) based on advertising and promotion expenses.
+def predict_cm(advertising_expense, promotion_expense):
+    """    
+    Parameters:
+    advertising_expense (float): The amount of money spent on advertising.
+    promotion_expense (float): The amount of money spent on promotions.
+
+    Returns:
+    predicted_cm (float): The predicted contribution margin.
+    """
+    # Coefficients from the model
+    coef_advertising = 0.3072
+    coef_promotion = -0.6399
+    intercept = 2218.4080
+
+    predicted_cm = coef_advertising * advertising_expense + coef_promotion * promotion_expense + intercept
+
+    return predicted_cm
+
+advertising_expense = 3126.5279  # Replace with actual value
+promotion_expense = 57.97  # Replace with actual value
+
+predicted_cm = predict_cm(advertising_expense, promotion_expense)
+print(f"The predicted Contribution Margin for Advertising Expense of {advertising_expense} and Promotion Expense of {promotion_expense} is {predicted_cm}")
