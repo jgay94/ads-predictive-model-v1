@@ -45,3 +45,20 @@ Notes:
 [2] The condition number is large, 1.85e+05. This might indicate that there are
 strong multicollinearity or other numerical problems.
 ```
+
+## Analysis
+The Ordinary Least Squares (OLS) regression model helps to understand how 'Gross Revenue', 'Promotion Expense', and 'Advertising Expense' are related to 'CM $'. The coefficients of 'Gross Revenue', 'Promotion Expense', and 'Advertising Expense' indicate their relative contribution to the 'CM $'.
+
+Looking at the results:
+
+'Gross Revenue' has a positive coefficient of 0.1840, indicating that for each unit increase in 'Gross Revenue', there is a 0.1840 unit increase in 'CM $', holding all else constant.
+
+'Promotion Expense' has a negative coefficient of -0.6399, suggesting that for each unit increase in 'Promotion Expense', there is a decrease of 0.6399 units in 'CM $', holding all else constant.
+
+'Advertising Expense' has a positive coefficient of 0.3072. This means for each unit increase in 'Advertising Expense', there is an increase of 0.3072 units in 'CM $', holding all else constant.
+
+However, we can't directly compare these coefficients to determine which variable contributes more to 'CM $', because the units of these variables might be different.
+
+To further analyze the contributions of 'Advertising Expense' and 'Promotion Expense' to 'CM $', you could run separate simple linear regression models for each independent variable ('Advertising Expense' and 'Promotion Expense') with 'CM $' as the dependent variable. This could help to better isolate and understand the relationships.
+
+Also, you might want to consider additional statistical techniques or models (like multivariate regression, interaction terms, etc.) and conducting a more detailed exploratory data analysis. Please consult a statistician or data scientist for a more in-depth analysis.
